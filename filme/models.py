@@ -15,7 +15,7 @@ class Filme(models.Model):
     descricao = models.TextField(max_length=1000)
     categoria = models.CharField(max_length=15, choices=LISTA_CATEGORIAS)
     visualizacoes = models.IntegerField(default=0)
-    data_criacao = models.DateTimeField(default=timezone.now) # sem parenteses: quero preencher o horário e data atual / com parenteses: sempre que abrisse esse filme seria rodado a função
+    data_criacao = models.DateTimeField(default=timezone.now) # sem parenteses: quero preencher o horário e data atual / com parenteses: sempre que abrir esse filme seria rodado a função
 
     def __str__(self):
         return self.titulo
